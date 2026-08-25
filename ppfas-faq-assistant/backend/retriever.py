@@ -7,8 +7,8 @@ import chromadb
 from chromadb.utils import embedding_functions
 
 def retrieve_chunks(query: str, top_k: int = 3) -> list[dict]:
-    # Use environment variable or default path relative to the app
-    persist_dir = os.environ.get("CHROMA_PERSIST_DIR", "embeddings/chroma_db")
+    # Use the baked-in database from the repository
+    persist_dir = "embeddings/chroma_db"
     client = chromadb.PersistentClient(path=persist_dir)
     
     model_name = os.environ.get("EMBEDDING_MODEL", "all-MiniLM-L6-v2")

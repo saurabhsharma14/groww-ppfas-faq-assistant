@@ -71,7 +71,7 @@ async def ask_question(request: AskRequest):
 
 @app.get("/status")
 async def status():
-    persist_dir = os.environ.get("CHROMA_PERSIST_DIR", "embeddings/chroma_db")
+    persist_dir = "embeddings/chroma_db"
     import chromadb
     try:
         client = chromadb.PersistentClient(path=persist_dir)
