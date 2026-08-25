@@ -6,21 +6,24 @@ import os
 import chromadb
 from chromadb.utils import embedding_functions
 
+# Initialize globally to avoid multi-second cold starts on every request
+_persist_dir = "embeddings/chroma_db"
+_model_name = os.environ.get("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
+
+_client = chromadb.PersistentClient(path=_persist_dir)
+_emb_fn = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=_model_name)
+
+try:
+    _collection = _client.get_collection(name="ppfas_faq", embedding_function=_emb_fn)
+except Exception:
+    _collection = None
+
+
 def retrieve_chunks(query: str, top_k: int = 3) -> list[dict]:
-    # Use the baked-in database from the repository
-    persist_dir = "embeddings/chroma_db"
-    client = chromadb.PersistentClient(path=persist_dir)
-    
-    model_name = os.environ.get("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
-    emb_fn = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=model_name)
-    
-    try:
-        collection = client.get_collection(name="ppfas_faq", embedding_function=emb_fn)
-    except Exception:
-        # Collection might not exist yet
+    if _collection is None:
         return []
         
-    results = collection.query(
+    results = _collection.query(
         query_texts=[query],
         n_results=top_k
     )
