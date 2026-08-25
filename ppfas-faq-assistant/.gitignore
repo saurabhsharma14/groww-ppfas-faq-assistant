@@ -13,7 +13,7 @@ __pycache__/
 embeddings/store/
 
 # Corpus cache
-corpus/chunks/
+# (unignored so it deploys to Railway)
 
 # OS
 .DS_Store

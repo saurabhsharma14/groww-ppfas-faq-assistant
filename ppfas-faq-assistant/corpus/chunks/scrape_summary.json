@@ -1,0 +1,138 @@
+{
+  "scrape_run_at": "2026-08-25T10:53:32Z",
+  "schemes": [
+    {
+      "scheme_name": "Parag Parikh Long Term Value Fund",
+      "url": "https://groww.in/mutual-funds/parag-parikh-long-term-value-fund-direct-growth",
+      "fields_found": [
+        "expense_ratio",
+        "exit_load",
+        "minimum_sip",
+        "minimum_lump_sum",
+        "riskometer",
+        "benchmark",
+        "lock_in_period",
+        "fund_manager",
+        "aum",
+        "fund_category",
+        "fund_name"
+      ],
+      "fields_missing": [],
+      "status": "ok"
+    },
+    {
+      "scheme_name": "Parag Parikh ELSS Tax Saver Fund",
+      "url": "https://groww.in/mutual-funds/parag-parikh-elss-tax-saver-fund-direct-growth",
+      "fields_found": [
+        "expense_ratio",
+        "exit_load",
+        "minimum_sip",
+        "minimum_lump_sum",
+        "riskometer",
+        "benchmark",
+        "lock_in_period",
+        "fund_manager",
+        "aum",
+        "fund_category",
+        "fund_name"
+      ],
+      "fields_missing": [],
+      "status": "ok"
+    },
+    {
+      "scheme_name": "Parag Parikh Large Cap Fund",
+      "url": "https://groww.in/mutual-funds/parag-parikh-large-cap-fund-direct-growth",
+      "fields_found": [
+        "expense_ratio",
+        "exit_load",
+        "minimum_sip",
+        "minimum_lump_sum",
+        "riskometer",
+        "benchmark",
+        "lock_in_period",
+        "fund_manager",
+        "aum",
+        "fund_category",
+        "fund_name"
+      ],
+      "fields_missing": [],
+      "status": "ok"
+    },
+    {
+      "scheme_name": "Parag Parikh Conservative Hybrid Fund",
+      "url": "https://groww.in/mutual-funds/parag-parikh-conservative-hybrid-fund-direct-growth",
+      "fields_found": [
+        "expense_ratio",
+        "exit_load",
+        "minimum_sip",
+        "minimum_lump_sum",
+        "riskometer",
+        "benchmark",
+        "lock_in_period",
+        "fund_manager",
+        "aum",
+        "fund_category",
+        "fund_name"
+      ],
+      "fields_missing": [],
+      "status": "ok"
+    },
+    {
+      "scheme_name": "Parag Parikh Liquid Fund",
+      "url": "https://groww.in/mutual-funds/parag-parikh-liquid-fund-direct-growth",
+      "fields_found": [
+        "expense_ratio",
+        "exit_load",
+        "minimum_sip",
+        "minimum_lump_sum",
+        "riskometer",
+        "benchmark",
+        "lock_in_period",
+        "fund_manager",
+        "aum",
+        "fund_category",
+        "fund_name"
+      ],
+      "fields_missing": [],
+      "status": "ok"
+    },
+    {
+      "scheme_name": "Parag Parikh Arbitrage Fund",
+      "url": "https://groww.in/mutual-funds/parag-parikh-arbitrage-fund-direct-growth",
+      "fields_found": [
+        "expense_ratio",
+        "exit_load",
+        "minimum_sip",
+        "minimum_lump_sum",
+        "riskometer",
+        "benchmark",
+        "lock_in_period",
+        "fund_manager",
+        "aum",
+        "fund_category",
+        "fund_name"
+      ],
+      "fields_missing": [],
+      "status": "ok"
+    },
+    {
+      "scheme_name": "Parag Parikh Dynamic Asset Allocation Fund",
+      "url": "https://groww.in/mutual-funds/parag-parikh-dynamic-asset-allocation-fund-direct-growth",
+      "fields_found": [
+        "expense_ratio",
+        "exit_load",
+        "minimum_sip",
+        "minimum_lump_sum",
+        "riskometer",
+        "benchmark",
+        "lock_in_period",
+        "fund_manager",
+        "aum",
+        "fund_category",
+        "fund_name"
+      ],
+      "fields_missing": [],
+      "status": "ok"
+    }
+  ]
+}
