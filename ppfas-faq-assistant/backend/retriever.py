@@ -8,10 +8,11 @@ from chromadb.utils import embedding_functions
 
 # Initialize globally to avoid multi-second cold starts on every request
 _persist_dir = "embeddings/chroma_db"
-_model_name = os.environ.get("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
-
 _client = chromadb.PersistentClient(path=_persist_dir)
-_emb_fn = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=_model_name)
+
+# Use the default ONNX embedding function instead of heavy PyTorch SentenceTransformers
+# This drastically reduces RAM usage and prevents Railway container from hitting swap memory.
+_emb_fn = embedding_functions.DefaultEmbeddingFunction()
 
 try:
     _collection = _client.get_collection(name="ppfas_faq", embedding_function=_emb_fn)

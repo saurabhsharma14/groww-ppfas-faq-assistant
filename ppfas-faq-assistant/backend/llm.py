@@ -32,7 +32,17 @@ Rules:
     # we'll pick the top chunk's metadata.
     top_meta = context_chunks[0]["metadata"]
     source_url = top_meta.get("source_url", "")
-    last_updated = top_meta.get("last_scraped_at", "")
+    last_updated_raw = top_meta.get("last_scraped_at", "")
+    
+    last_updated = last_updated_raw
+    if last_updated_raw:
+        try:
+            from datetime import datetime, timedelta
+            dt = datetime.strptime(last_updated_raw, "%Y-%m-%dT%H:%M:%SZ")
+            dt_ist = dt + timedelta(hours=5, minutes=30)
+            last_updated = dt_ist.strftime("%d-%m-%Y %H:%M:%S")
+        except Exception:
+            pass
     
     try:
         api_key = os.environ.get("GROQ_API_KEY", "")

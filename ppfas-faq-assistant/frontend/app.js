@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const avatarDiv = document.createElement('div');
     avatarDiv.className = 'avatar-container';
-    avatarDiv.innerHTML = '<div class="avatar">🤖</div>';
+    avatarDiv.innerHTML = '<div class="avatar"><img src="assets/logo_new.png" alt="PPFAS" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; background: white;"></div>';
     msgDiv.appendChild(avatarDiv);
 
     const contentDiv = document.createElement('div');
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const avatarDiv = document.createElement('div');
     avatarDiv.className = 'avatar-container';
-    avatarDiv.innerHTML = '<div class="avatar">🤖</div>';
+    avatarDiv.innerHTML = '<div class="avatar"><img src="assets/logo_new.png" alt="PPFAS" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; background: white;"></div>';
     indicatorDiv.appendChild(avatarDiv);
 
     const contentDiv = document.createElement('div');

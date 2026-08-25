@@ -33,7 +33,7 @@ class AskResponse(BaseModel):
     is_refusal: bool
 
 @app.post("/ask", response_model=AskResponse)
-async def ask_question(request: AskRequest):
+def ask_question(request: AskRequest):
     qtype = classify_query(request.query)
     
     if qtype != QueryType.FACTUAL:
