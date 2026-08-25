@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const charCounter = document.querySelector('.char-counter');
   
   const MAX_CHARS = 300;
-  const API_URL = 'https://web-production-d515e.up.railway.app/ask'; // Ensure the backend is running here
+  const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:';
+  const API_URL = isLocal ? 'https://web-production-d515e.up.railway.app/ask' : '/api/ask';
+
   
   let consecutiveRefusals = 0;
 
