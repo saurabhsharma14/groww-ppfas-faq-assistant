@@ -78,13 +78,5 @@ async def ask_question(request: AskRequest):
 
 @app.get("/status")
 async def status():
-    persist_dir = "embeddings/chroma_db"
-    import chromadb
-    try:
-        client = chromadb.PersistentClient(path=persist_dir)
-        # Using get_collection assuming it is already populated
-        collection = client.get_collection(name="ppfas_faq")
-        count = collection.count()
-        return {"status": "ok", "corpus_size": count}
-    except Exception as e:
-        return {"status": "error", "message": str(e)}
+    from backend.retriever import _all_chunks
+    return {"status": "ok", "corpus_size": len(_all_chunks)}
