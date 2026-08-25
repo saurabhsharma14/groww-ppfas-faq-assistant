@@ -2,6 +2,13 @@
 main.py — FastAPI application entry point for the PPFAS FAQ Assistant.
 """
 import os
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
+os.environ["VECLIB_MAXIMUM_THREADS"] = "1"
+os.environ["NUMEXPR_NUM_THREADS"] = "1"
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 from dotenv import load_dotenv
 load_dotenv()
 from fastapi import FastAPI
@@ -33,7 +40,7 @@ class AskResponse(BaseModel):
     is_refusal: bool
 
 @app.post("/ask", response_model=AskResponse)
-def ask_question(request: AskRequest):
+async def ask_question(request: AskRequest):
     qtype = classify_query(request.query)
     
     if qtype != QueryType.FACTUAL:

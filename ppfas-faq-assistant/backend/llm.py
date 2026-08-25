@@ -40,7 +40,7 @@ Rules:
             from datetime import datetime, timedelta
             dt = datetime.strptime(last_updated_raw, "%Y-%m-%dT%H:%M:%SZ")
             dt_ist = dt + timedelta(hours=5, minutes=30)
-            last_updated = dt_ist.strftime("%d-%m-%Y %H:%M:%S")
+            last_updated = dt_ist.strftime("%d-%m-%Y %H:%M:%S IST")
         except Exception:
             pass
     
