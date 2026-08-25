@@ -1,0 +1,20 @@
+# Environment variables — never commit
+.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Vector store (can be large)
+embeddings/store/
+
+# Corpus cache
+corpus/chunks/
+
+# OS
+.DS_Store
+Thumbs.db

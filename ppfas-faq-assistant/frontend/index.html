@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>PPFAS Mutual Fund FAQ Assistant</title>
+  <meta name="description" content="Facts-only PPFAS Mutual Fund FAQ Assistant">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="app-container">
+    <header class="app-header">
+      <div class="disclaimer-banner">
+        <span class="warning-icon">⚠️</span> Facts-only. No investment advice.
+      </div>
+      <div class="header-content">
+        <div class="logo-container">
+          <img src="assets/logo_new.png" alt="PPFAS Logo" class="brand-logo">
+        </div>
+        <div class="header-text">
+          <h1>PPFAS FAQ Assistant</h1>
+          <p>Your intelligent, factual guide to Parag Parikh mutual funds.</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="chat-container">
+      <div id="chat-window" class="chat-window">
+        <div class="message assistant-message welcome-message">
+          <div class="avatar-container">
+            <div class="avatar">🤖</div>
+          </div>
+          <div class="message-content">
+            <p>Welcome! I can help you find factual information about PPFAS mutual funds directly from Groww, like expense ratios, exit loads, and SIP minimums.</p>
+            <p class="suggestion-title">Here are some things you can ask me:</p>
+            <div class="example-questions" id="example-questions">
+              <!-- JS will inject randomized questions here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="input-container">
+      <form id="chat-form" class="chat-form">
+        <div class="input-wrapper">
+          <input 
+            type="text" 
+            id="chat-input" 
+            placeholder="Ask a factual question..." 
+            autocomplete="off" 
+            maxlength="300"
+            required
+          >
+          <button type="submit" id="send-btn" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </div>
+        <div class="char-counter"><span id="char-count">0</span> / 300</div>
+      </form>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
