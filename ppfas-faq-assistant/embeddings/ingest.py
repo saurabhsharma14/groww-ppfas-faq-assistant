@@ -9,8 +9,10 @@ from chromadb.utils import embedding_functions
 logging.basicConfig(level=logging.INFO, format="%(asctime)s  %(levelname)-8s %(message)s", datefmt="%H:%M:%S")
 log = logging.getLogger("ingest")
 
+import os
+
 CORPUS_DIR = Path("corpus/chunks")
-DB_DIR = Path("embeddings/chroma_db")
+DB_DIR = Path(os.environ.get("CHROMA_PERSIST_DIR", "embeddings/chroma_db"))
 
 
 def format_field_name(field: str) -> str:
