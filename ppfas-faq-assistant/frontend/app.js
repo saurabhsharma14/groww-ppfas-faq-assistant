@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const charCounter = document.querySelector('.char-counter');
   
   const MAX_CHARS = 300;
-  const API_URL = 'http://127.0.0.1:8000/ask'; // Ensure the backend is running here
+  const API_URL = 'https://web-production-d515e.up.railway.app/ask'; // Ensure the backend is running here
   
   let consecutiveRefusals = 0;
 
