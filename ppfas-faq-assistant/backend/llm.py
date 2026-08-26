@@ -3,9 +3,9 @@ llm.py — LLM Answer Generator using the Groq API.
 """
 import os
 import json
-from groq import Groq
+from groq import AsyncGroq
 
-def generate_answer(query: str, context_chunks: list[dict]) -> dict:
+async def generate_answer(query: str, context_chunks: list[dict]) -> dict:
     if not context_chunks:
         return {
             "answer": "I don't have this information. Please visit: https://groww.in/mutual-funds/category/ppfas-mutual-fund",
@@ -42,10 +42,10 @@ You MUST reply in valid JSON format with EXACTLY three keys:
         if not api_key:
             return {"answer": "Error: GROQ_API_KEY environment variable is not set.", "source_url": "", "last_updated": ""}
 
-        client = Groq(api_key=api_key)
+        client = AsyncGroq(api_key=api_key)
         model = os.environ.get("GROQ_LLM_MODEL", "llama-3.1-8b-instant")
         
-        response = client.chat.completions.create(
+        response = await client.chat.completions.create(
             model=model,
             messages=[
                 {"role": "system", "content": system_prompt},

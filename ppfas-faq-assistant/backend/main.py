@@ -67,7 +67,7 @@ async def ask_question(request: AskRequest):
             is_refusal=False
         )
         
-    llm_res = generate_answer(request.query, chunks)
+    llm_res = await generate_answer(request.query, chunks)
     
     return AskResponse(
         answer=llm_res["answer"],
