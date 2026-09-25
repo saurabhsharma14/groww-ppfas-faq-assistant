@@ -1,5 +1,5 @@
 {
-  "scrape_run_at": "2026-09-24T09:27:36Z",
+  "scrape_run_at": "2026-09-25T09:44:55Z",
   "schemes": [
     {
       "scheme_name": "Parag Parikh Long Term Value Fund",
@@ -24,20 +24,19 @@
       "scheme_name": "Parag Parikh ELSS Tax Saver Fund",
       "url": "https://groww.in/mutual-funds/parag-parikh-elss-tax-saver-fund-direct-growth",
       "fields_found": [
-        "exit_load",
-        "minimum_lump_sum",
-        "lock_in_period",
-        "fund_manager",
-        "fund_name"
-      ],
-      "fields_missing": [
         "expense_ratio",
+        "exit_load",
         "minimum_sip",
+        "minimum_lump_sum",
         "riskometer",
         "benchmark",
+        "lock_in_period",
+        "fund_manager",
         "aum",
-        "fund_category"
+        "fund_category",
+        "fund_name"
       ],
+      "fields_missing": [],
       "status": "ok"
     },
     {
